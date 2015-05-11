@@ -1,0 +1,43 @@
+﻿<div class="col-lg-4">
+    <div class="form-group">
+        <label>State</label>
+        <select class="form-control">
+            <option>Karnataka</option>
+            <option>Andhra Pradesh</option>
+            <option>Delhi</option>
+            <option>Maharashtra</option>
+        </select>
+    </div>
+</div>
+<div class="col-lg-4">
+    <div class="form-group">
+        <label>City</label>
+        <select class="form-control">
+            <option>Bengaluru</option>
+            <option>Mysore</option>
+            <option>Mangalore</option>
+        </select>
+    </div>
+</div>
+<div class="col-lg-4">
+    <label>Date</label>
+    <div id="date-container">
+        <div class="input-group date">
+            <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+        </div>
+    </div>
+    </br>
+</div>
+
+<div class="col-lg-4"></div>
+<div class="col-lg-4">
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="SearchFlight()">Search deals</button>
+</div>
+<div class="col-lg-4"></div>
+<script>
+    function SearchFlight() {
+        var url = "@Html.Raw(Url.Action("GetAds", "Home"))";
+        $('#main-view').load(url, function () {
+        });
+    }
+</script>

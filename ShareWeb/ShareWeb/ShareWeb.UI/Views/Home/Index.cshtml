@@ -1,0 +1,102 @@
+﻿<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-9">
+            <h1 id="title-content" class="page-header">Trekking</h1>
+            @*<div class="fb-like"
+                 data-share="true"
+                 data-width="450"
+                 data-show-faces="true">
+            </div>*@
+            @*<fb:login-button autologoutlink="true" perms="read_friendlists, create_event, email, publish_stream"></fb:login-button>*@
+        </div>
+        <div class="col-lg-3">
+            </br>
+            </br>
+            <div class="text-right">
+                <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                <a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div id="main-view" class="col-lg-9">
+            @Html.Partial("AdsForm")
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-tags fa-fw"></i> Burning deals
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-tag fa-fw"></i> Deal 1
+                            <span class="pull-right text-muted small">
+                                <em>only 2 left</em>
+                            </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-tag fa-fw"></i> Deal 2
+                            <span class="pull-right text-muted small">
+                                <em>only 2 left</em>
+                            </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-tag fa-fw"></i> Deal 3
+                            <span class="pull-right text-muted small">
+                                <em>only 2 left</em>
+                            </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-tag fa-fw"></i> Deal 4
+                            <span class="pull-right text-muted small">
+                                <em>only 2 left</em>
+                            </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-tag fa-fw"></i> Deal 5
+                            <span class="pull-right text-muted small">
+                                <em>only 2 left</em>
+                            </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-tag fa-fw"></i> Deal 6
+                            <span class="pull-right text-muted small">
+                                <em>only 2 left</em>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- /.list-group -->
+                    <a href="#" class="btn btn-default btn-block">View all deals</a>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <script>
+        $(document).ready(function () {
+            enableDatePicker();
+        });
+        function enableDatePicker() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1;//January is 0!`
+
+            var yyyy = today.getFullYear();
+            if (dd < 10) { dd = '0' + dd }
+            if (mm < 10) { mm = '0' + mm }
+            var today = mm + '/' + dd + '/' + yyyy;
+            $('#date-container .input-group.date').datepicker({
+                startDate: today,
+                keyboardNavigation: false
+            });
+        }
+    </script>
